@@ -9,6 +9,8 @@ class Coach extends Authenticatable
 {
     use Notifiable;
 
+    /** @var string name */
+
     /**
      * The attributes that are mass assignable.
      *

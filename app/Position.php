@@ -34,7 +34,7 @@ class Position
      * @param int $armour
      * @param string[] $skillIds
      */
-    public function __construct(string $id, string $name, int $movement, int $agility, int $strength, int $armour, $skillIds = array())
+    public function __construct(string $id, string $name, int $movement, int $agility, int $strength, int $armour, array $skillIds = array())
     {
         $this->id = $id;
         $this->name = $name;

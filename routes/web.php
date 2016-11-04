@@ -21,11 +21,7 @@ Route::get('/home', 'HomeController@index');
 
 Route::resource('/teams', 'TeamsController');
 
-Route::get('/api/races', function() {
-    return \App\Race::all();
-});
-
-Route::get('/api/races/{raceId}/positions', function($raceId) {
-    $positions = \App\Position::getByRaceId($raceId);
-    return $positions;
+Route::get('/api/races/{raceId}', function($raceId) {
+    $race = \App\Race::findOrFail($raceId);
+    return json_encode($race);
 });

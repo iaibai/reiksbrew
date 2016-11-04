@@ -5,6 +5,18 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
+                <div class="panel-heading">Messing with Vue</div>
+
+                <div class="panel-body">
+                    <component is="team-editor" inline-template>
+                        <div>
+                            @{{ lunch }}
+                        </div>
+                    </component>
+                </div>
+            </div>
+
+            <div class="panel panel-default">
                 <div class="panel-heading">Create Team</div>
 
                 <div class="panel-body">

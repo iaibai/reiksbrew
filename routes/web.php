@@ -18,3 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('/teams', 'TeamsController');
+
+Route::get('/api/races', function() {
+    return \App\Race::all();
+});
+
+Route::get('/api/races/{raceId}/positions', function($raceId) {
+    $positions = \App\Position::getByRaceId($raceId);
+    return $positions;
+});

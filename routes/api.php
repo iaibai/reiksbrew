@@ -13,6 +13,7 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/coach', function (Request $request) {
-    return $request->user();
+
+Route::get('/api/races', function (Request $request) {
+    return \App\Race::all();
 })->middleware('auth:api');

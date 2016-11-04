@@ -9,7 +9,7 @@
 
                 <div class="panel-body">
                     @foreach ($teams as $team)
-                        <p>{{ $team->name }} - {{ $team->race_id }}</p>
+                        <p>{{ $team->name }} - {{ $team->race_id }} - {{ $team->coach_id }}</p>
                     @endforeach
                 </div>
             </div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Team;
 use App\Race;
+use App\Coach;
+use Illuminate\Support\Facades\Auth;
 
 class TeamsController extends Controller
 {
@@ -38,7 +40,13 @@ class TeamsController extends Controller
      */
     public function store(Request $request)
     {
-        $team = Team::create($request->all());
+        $input = $request->all();
+        $team = new Team;
+        $team->name = $input['name'];
+        $team->race_id = $input['race_id'];
+        $team->coach_id = Auth::user()->id;
+
+        $team->save();
 
         return redirect('teams');
     }

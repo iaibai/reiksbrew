@@ -127,8 +127,8 @@ class Position
 
             'humans' => [
                 new Position('human_lineman', 'Lineman', 4, 3, 3, 8),
-                new Position('human_thrower', 'Lineman', 4, 3, 3, 8),
-                new Position('human_catcher', 'Lineman', 4, 3, 3, 8)
+                new Position('human_thrower', 'Thrower', 4, 3, 3, 8),
+                new Position('human_catcher', 'Catcher', 4, 3, 3, 8)
             ]
         ];
     }
